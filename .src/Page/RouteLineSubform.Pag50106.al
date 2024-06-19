@@ -19,6 +19,11 @@ page 50106 "HG Route Line Subform"
                 {
                     ToolTip = 'Specifies the value of the Stop No. field.', Comment = '%';
                 }
+
+                field("Stop Name"; Rec."Stop Name")
+                {
+                    ToolTip = 'Specifies the value of the Stop Name field.', Comment = '%';
+                }
                 field(Boarding; Rec.Boarding)
                 {
                     ToolTip = 'Specifies the value of the Boarding field.', Comment = '%';

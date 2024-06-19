@@ -45,8 +45,10 @@ page 50102 "HG Route Schedule Line Card"
                 ApplicationArea = All;
                 Caption = 'Show Trips';
                 Image = GetLines;
-                RunObject = Page "HG Trip Card";
-                RunPageLink = "Route Schedule Line No." = FIELD("Line No."), "Route No." = FIELD("Route No.");
+                trigger OnAction()
+                begin
+                    Message('In progress');
+                end;
             }
             action(CreateTrip)
             {
@@ -54,13 +56,10 @@ page 50102 "HG Route Schedule Line Card"
                 Caption = 'Create Trip';
 
                 Image = Add;
-                RunObject = Page "HG Trip Card";
-                RunPageLink = "Route Schedule Line No." = FIELD("Line No."), "Route No." = FIELD("Route No.");
-                trigger OnAction()
-                var
-                    RouteFunctions: Codeunit "HG Route Functions";
-                begin
 
+                trigger OnAction()
+                begin
+                    Message('In progress');
                 end;
             }
 

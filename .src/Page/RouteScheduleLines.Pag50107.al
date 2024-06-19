@@ -35,4 +35,43 @@ page 50107 "HG Route Schedule Lines"
             }
         }
     }
+
+    actions
+    {
+        area(Processing)
+        {
+            action(CreateTrip)
+            {
+                ApplicationArea = All;
+                Caption = 'Create Trip';
+
+                Image = Add;
+                trigger OnAction()
+                begin
+                    Message('In progress');
+                end;
+            }
+
+            action(ShowTrips)
+            {
+                ApplicationArea = All;
+                Caption = 'Show Trips';
+                Image = GetLines;
+                trigger OnAction()
+                begin
+                    Message('In progress');
+                end;
+            }
+        }
+
+        area(Promoted)
+        {
+            actionref(ShowTrips_Promoted; "ShowTrips")
+            {
+            }
+            actionref(CreateTrip_Promoted; "CreateTrip")
+            {
+            }
+        }
+    }
 }

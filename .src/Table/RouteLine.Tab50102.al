@@ -42,6 +42,14 @@ table 50102 "HG Route Line"
         {
             Caption = 'Travel Time (Planned)';
         }
+
+        field(9; "Stop Name"; text[100])
+        {
+            Caption = 'Stop Name';
+            fieldclass = FlowField;
+            CalcFormula = lookup("HG Route Stop".Name where("No." = field("Stop No.")));
+            editable = false;
+        }
     }
     keys
     {

@@ -10,9 +10,9 @@ table 50100 "HG Route Stop"
             Caption = 'No.';
             DataClassification = CustomerContent;
         }
-        field(2; Name; Code[20])
+        field(2; Name; text[100])
         {
-            Caption = 'NAW';
+            Caption = 'Name';
             DataClassification = CustomerContent;
         }
         field(3; Address; Text[100])
