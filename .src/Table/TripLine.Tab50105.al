@@ -20,6 +20,8 @@ table 50105 "HG Trip Line"
         {
             Caption = 'Stop No.';
             DataClassification = CustomerContent;
+            TableRelation = "HG Route Stop"."No.";
+            ValidateTableRelation = false;
         }
 
         field(4; Boarding; Boolean)

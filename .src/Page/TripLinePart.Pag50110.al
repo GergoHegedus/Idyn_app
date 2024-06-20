@@ -5,6 +5,7 @@ page 50110 "HG Trip Line Part"
     PageType = ListPart;
     SourceTable = "HG Trip Line";
     AutoSplitKey = true;
+    DelayedInsert = true;
 
     layout
     {
@@ -12,14 +13,7 @@ page 50110 "HG Trip Line Part"
         {
             repeater(General)
             {
-                field("Trip No."; Rec."Trip No.")
-                {
-                    ToolTip = 'Specifies the value of the No. field.', Comment = '%';
-                }
-                field("Line No."; Rec."Line No.")
-                {
-                    ToolTip = 'Specifies the value of the Line No. field.', Comment = '%';
-                }
+
                 field("Stop No."; Rec."Stop No.")
                 {
                     ToolTip = 'Specifies the value of the Stop No. field.', Comment = '%';

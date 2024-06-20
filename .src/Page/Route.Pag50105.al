@@ -5,7 +5,7 @@ page 50105 "HG Route"
     PageType = Document;
     SourceTable = "HG Route";
     RefreshOnActivate = true;
-
+    DataCaptionFields = "No.", Name;
     layout
     {
         area(Content)
@@ -33,6 +33,7 @@ page 50105 "HG Route"
                 ApplicationArea = All;
                 Caption = 'Route Line';
                 SubPageLink = "Route No." = field("No.");
+                ShowFilter = false;
             }
         }
 
@@ -54,10 +55,19 @@ page 50105 "HG Route"
         {
             action(RouteScheduleLines)
             {
-                Caption = 'Route Schedule Lines';
+                Caption = 'Route Schedule';
                 Image = StepOut;
                 RunObject = Page "HG Route Schedule Lines";
                 RunPageLink = "Route No." = FIELD("No.");
+
+            }
+        }
+
+        area(Promoted)
+        {
+            actionref(RouteScheduleLines_promoted; RouteScheduleLines)
+            {
+
             }
         }
     }

@@ -4,9 +4,10 @@ page 50107 "HG Route Schedule Lines"
     Caption = 'Route Schedule Lines';
     PageType = List;
     SourceTable = "HG Route Schedule Line";
-    UsageCategory = Lists;
     AutoSplitKey = true;
     CardPageId = "HG Route Schedule Line Card";
+    ShowFilter = false;
+    DelayedInsert = true;
 
     layout
     {
@@ -57,10 +58,13 @@ page 50107 "HG Route Schedule Lines"
                 ApplicationArea = All;
                 Caption = 'Show Trips';
                 Image = GetLines;
-                trigger OnAction()
-                begin
-                    Message('In progress');
-                end;
+                RunObject = Page "HG Trips";
+                RunPageLink = "Route Schedule Line No." = FIELD("Line No.");
+
+                // trigger OnAction()
+                // begin
+                //     Message('In progress');
+                // end;
             }
         }
 

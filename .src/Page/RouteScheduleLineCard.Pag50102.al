@@ -1,7 +1,7 @@
 page 50102 "HG Route Schedule Line Card"
 {
     ApplicationArea = All;
-    Caption = 'Route Schedule Line Card';
+    Caption = 'Route Schedule Card';
     PageType = Card;
     SourceTable = "HG Route Schedule Line";
 
@@ -45,10 +45,12 @@ page 50102 "HG Route Schedule Line Card"
                 ApplicationArea = All;
                 Caption = 'Show Trips';
                 Image = GetLines;
-                trigger OnAction()
-                begin
-                    Message('In progress');
-                end;
+                RunObject = Page "HG Trips";
+                RunPageLink = "Route Schedule Line No." = FIELD("Line No.");
+                // trigger OnAction()
+                // begin
+                //     Message('In progress');
+                // end;
             }
             action(CreateTrip)
             {

@@ -50,8 +50,12 @@ page 50109 "HG Trip Card"
             {
                 Caption = 'Create Slot';
                 Image = StepOut;
-                RunObject = Page "HG Slot Card";
-                RunPageLink = "Trip No." = FIELD("No.");
+
+                trigger OnAction()
+
+                begin
+                    Message('In progress');
+                end;
             }
 
 

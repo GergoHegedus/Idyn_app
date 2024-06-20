@@ -2,47 +2,44 @@ enum 50100 "HG Period Type"
 {
     Extensible = true;
 
-    value(0; " ")
-    {
-        Caption = ' ';
-    }
-    value(1; Monday)
+
+    value(0; Monday)
     {
         Caption = 'Monday';
     }
-    value(2; Tuesday)
+    value(1; Tuesday)
     {
         Caption = 'Tuesday';
     }
-    value(3; Wednesday)
+    value(2; Wednesday)
     {
         Caption = 'Wednesday';
     }
-    value(4; Thursday)
+    value(3; Thursday)
     {
         Caption = 'Thursday';
     }
-    value(5; Friday)
+    value(4; Friday)
     {
         Caption = 'Friday';
     }
-    value(6; Saturday)
+    value(5; Saturday)
     {
         Caption = 'Saturday';
     }
-    value(7; Sunday)
+    value(6; Sunday)
     {
         Caption = 'Sunday';
     }
-    value(8; WeekDays)
+    value(7; WeekDays)
     {
         Caption = 'WeekDays';
     }
-    value(9; WeekEnds)
+    value(8; WeekEnds)
     {
         Caption = 'WeekEnds';
     }
-    value(10; "Public Holidays")
+    value(9; "Public Holidays")
     {
         Caption = 'Public Holidays';
     }

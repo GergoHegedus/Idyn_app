@@ -2,7 +2,7 @@ table 50103 "HG Route Schedule Line"
 {
     Caption = 'Route Schedule Line';
     DataClassification = ToBeClassified;
-    LookupPageId = "HG Route Schedule Line Part";
+    LookupPageId = "HG Route Schedule Lines";
 
     fields
     {
