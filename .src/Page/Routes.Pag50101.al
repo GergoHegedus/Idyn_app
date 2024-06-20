@@ -6,6 +6,7 @@ page 50101 "HG Routes"
     SourceTable = "HG Route";
     UsageCategory = Lists;
     CardPageId = "HG Route";
+    InsertAllowed = false;
 
     layout
     {
