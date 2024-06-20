@@ -5,6 +5,7 @@ page 50108 "HG Route Stops"
     PageType = List;
     SourceTable = "HG Route Stop";
     UsageCategory = Lists;
+    DelayedInsert = true;
 
     layout
     {
