@@ -1,3 +1,5 @@
+The app has been created on BC24.
+
 From the Item list you can run the function: 'Get Items from API' which creates the items if they don't already exists. For the sake of testing if an item already exists it gets deleted by the function.
 
 Screenshot of the items created by the API call:
