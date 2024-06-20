@@ -112,12 +112,21 @@ codeunit 50100 "HG API Functions"
 
 
     local procedure CreateItem(var pItem: Record Item; pItemNoFromJson: Text)
+    var
+        ItemTempl: Record "Item Templ.";
     begin
+
         pItem.Init();
         pItem.Validate("No.", CopyStr(pItemNoFromJson.ToUpper(), 1, MaxStrLen(pItem."No.")));
         pItem.Insert();
-        pItem.Validate("Base Unit of Measure", 'pcs');
-        pItem.Modify();
+
+        if ItemTempl.get('ITEM') then begin
+            pItem.Validate("Base Unit of Measure", ItemTempl."Base Unit of Measure");
+            pItem.Validate("Gen. Prod. Posting Group", ItemTempl."Gen. Prod. Posting Group");
+            pItem.Validate("VAT Prod. Posting Group", ItemTempl."VAT Prod. Posting Group");
+            pItem.Validate("Inventory Posting Group", ItemTempl."Inventory Posting Group");
+            pItem.Modify();
+        end;
     end;
 
     local procedure SetItemCategory(var pItem: Record Item; pItemCategoryFromJson: Text)
