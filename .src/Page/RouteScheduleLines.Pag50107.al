@@ -5,7 +5,6 @@ page 50107 "HG Route Schedule Lines"
     PageType = List;
     SourceTable = "HG Route Schedule Line";
     AutoSplitKey = true;
-    CardPageId = "HG Route Schedule Line Card";
     ShowFilter = false;
     DelayedInsert = true;
 
